@@ -1,18 +1,21 @@
 package main;
-
+import java.util.ArrayList;
 public class Organiser {
 
     private int organiserId;
     private String name;
     private String contactInfo;
+    private ArrayList<Event> events;
 
     public Organiser() {
+    	events = new ArrayList<>();
     }
 
     public Organiser(int organiserId, String name, String contactInfo) {
         this.organiserId = organiserId;
         this.name = name;
         this.contactInfo = contactInfo;
+        this.events = new ArrayList<>();
     }
 
     public int getOrganiserId() {
@@ -37,6 +40,13 @@ public class Organiser {
 
     public void setContactInfo(String contactInfo) {
         this.contactInfo = contactInfo;
+    }
+    public ArrayList<Event> getEvents() {
+        return events;
+    }
+
+    public void setEvents(ArrayList<Event> events) {
+        this.events = events;
     }
 
     public String toString() {
