@@ -1,13 +1,16 @@
 package main;
 
+import java.util.ArrayList;
 public class Participant {
 
     private int participantId;
     private String name;
     private String email;
     private String phoneNumber;
+    private ArrayList<Registration> registrations;
     
     public Participant() {
+    	registrations = new ArrayList<>();
     }
 
     public Participant(int participantId, String name, String email, String phoneNumber) {
@@ -15,6 +18,8 @@ public class Participant {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.registrations = new ArrayList<>();
+        
     }
 
     public int getParticipantId() {
@@ -47,6 +52,13 @@ public class Participant {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+    public ArrayList<Registration> getRegistrations() {
+        return registrations;
+    }
+
+    public void setRegistrations(ArrayList<Registration> registrations) {
+        this.registrations = registrations;
     }
 
     public String toString() {
