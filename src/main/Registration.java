@@ -52,6 +52,8 @@ package main;
 
 	    public String toString() {
 	        return "Registration ID: " + registrationId +
-	                ", Date: " + registrationDate;
+	                ", Date: " + registrationDate +
+	                ", Participant: " + participant.getName() +
+	                ", Event: " + event.getName();
 	    }
 	}
