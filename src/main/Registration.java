@@ -4,13 +4,17 @@ package main;
 
 	    private int registrationId;
 	    private String registrationDate;
+	    private Participant participant;
+	    private Event event;
 
 	    public Registration() {
 	    }
 
-	    public Registration(int registrationId, String registrationDate) {
+	    public Registration(int registrationId, String registrationDate, Participant participant, Event event) {
 	        this.registrationId = registrationId;
 	        this.registrationDate = registrationDate;
+	        this.participant = participant;
+	        this.event = event;
 	    }
 
 	    public int getRegistrationId() {
@@ -27,6 +31,23 @@ package main;
 
 	    public void setRegistrationDate(String registrationDate) {
 	        this.registrationDate = registrationDate;
+	        
+	        
+	    }
+	    public Participant getParticipant() {
+	        return participant;
+	    }
+
+	    public void setParticipant(Participant participant) {
+	        this.participant = participant;
+	    }
+
+	    public Event getEvent() {
+	        return event;
+	    }
+
+	    public void setEvent(Event event) {
+	        this.event = event;
 	    }
 
 	    public String toString() {
