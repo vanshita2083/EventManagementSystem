@@ -1,5 +1,5 @@
 package main;
-	
+import java.util.ArrayList;
 	public class Event {
 
 	    private int eventId;
@@ -7,8 +7,10 @@ package main;
 	    private String location;
 	    private String date;
 	    private int maxParticipants;
-
+	    private ArrayList<Registration> registrations;
+	    
 	    public Event() {
+	    	registrations = new ArrayList<>();
 	    }
 
 	    public Event(int eventId, String name, String location, String date, int maxParticipants) {
@@ -17,6 +19,7 @@ package main;
 	        this.location = location;
 	        this.date = date;
 	        this.maxParticipants = maxParticipants;
+	        this.registrations = new ArrayList<>();
 	    }
 
 	    public int getEventId() {
@@ -58,13 +61,22 @@ package main;
 	    public void setMaxParticipants(int maxParticipants) {
 	        this.maxParticipants = maxParticipants;
 	    }
+	    public ArrayList<Registration> getRegistrations() {
+	        return registrations;
+	    }
 
+	    public void setRegistrations(ArrayList<Registration> registrations) {
+	        this.registrations = registrations;
+	    }
+	    
+	    
 	    public String toString() {
 	        return "Event ID: " + eventId +
 	                ", Name: " + name +
 	                ", Location: " + location +
 	                ", Date: " + date +
 	                ", Max Participants: " + maxParticipants;
+	        
 	    }
 	}
 
